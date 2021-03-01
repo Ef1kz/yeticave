@@ -28,7 +28,23 @@ $user_name = 'Ef1kz11'; // укажите здесь ваше имя
 
         <nav class="user-menu">
 
-        <!-- здесь должен быть PHP код для показа меню и данных пользователя -->
+       <?php if ($is_auth==1):?>
+            <div>
+            <img src="img" width="40" height="40" alt="Пользователь">
+            </div>
+           <div class="user-menu__list"
+            <p></p>
+    </div>
+            <?php else: ?>
+                <ul class="user-menu__list">
+                    <li class="user-menu__item">
+                        <a href="#">Регистрация</a>
+                    </li>
+                    <li class="user-menu__item">
+                        <a href="#">Вход</a>
+                    </li>
+                </ul>
+            <?php endif; ?>
 
         </nav>
     </div>
