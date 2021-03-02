@@ -21,7 +21,7 @@ $data_list = [
     [
         'name' => 'DC Ply Mens 2016/2017 Snowboard',
         'category' => 'Доски и лыжи',
-        'price' => 15999,
+        'price' => 159999,
         'gif' => 'img/lot-2.jpg'
     ],
     [
@@ -61,7 +61,7 @@ $data_list = [
 <body>
 <div class="page-wrapper">
 
-<header class="main-header">
+ <header class="main-header">
     <div class="main-header__container container">
         <h1 class="visually-hidden">YetiCave</h1>
         <a class="main-header__logo">
@@ -93,8 +93,8 @@ $data_list = [
                 </ul>
             <?php endif; ?>
 
-        </nav>
-    </div>
+        </div>
+    </nav>
 </header>
 
 <main class="container">
