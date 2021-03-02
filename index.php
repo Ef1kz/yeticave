@@ -1,6 +1,5 @@
 <?php
 $is_auth = rand(0, 1);
-
 $user_name = 'Ef1kz11'; // укажите здесь ваше имя
 $categories = [
     "Boards" => "Доски и лыжи",
@@ -48,7 +47,32 @@ $data_list = [
         'price' => 5400,
         'gif' => 'img/lot-6.jpg'
     ]
-];
+]
+;
+
+function sum_format ($number)
+{
+    $withRubleElem=true;
+    $number=ceil($number);
+    $price=$number;
+    if ($number>=1000)
+    {
+        $price= number_format ($number,0, '.', ' ');
+    }
+    else
+    {
+        $price=$number;
+    }
+    if ($withRubleElem==true)
+    {
+        return $price . '<b class=\"rub\">р</b></b>';
+    }
+    else
+    {
+        return $price;
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -127,7 +151,7 @@ $data_list = [
                         <div class="lot__state">
                             <div class="lot__rate">
                                 <span class="lot__amount">Стартовая цена</span>
-                                <span class="lot__cost"><?=$lot['price'];?><b class="rub">р</b></span>
+                                <span class="lot__cost"><?=sum_format($lot['price']) ;?></span>
                             </div>
                             <div class="lot__timer timer">
                                 12:23
