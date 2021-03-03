@@ -1,5 +1,6 @@
 <?php
 $is_auth = rand(0, 1);
+
 $img_user='img/user.png';
 $user_name = 'Ef1kz11'; // укажите здесь ваше имя
 $categories = [
@@ -48,8 +49,20 @@ $data_list = [
         'price' => 5400,
         'gif' => 'img/lot-6.jpg'
     ]
-]
-;
+];
+
+function time_page()
+{
+    $now=strtotime('now');
+    $tomorrow=strtotime('tomorrow');
+    $time=$tomorrow-$now;
+    $hour=floor($time/3600);
+    $minut=floor(($time%3600)/60);
+    $time=sprintf("%02d:%02d",$hour,$minut);
+    return($time);
+
+}
+
 
 function sum_format ($number)
 {
