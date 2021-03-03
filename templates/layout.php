@@ -25,7 +25,7 @@
 
                 <?php if ($is_auth):?>
                 <div>
-                    <img src="img" width="40" height="40" alt="Пользователь">
+                    <img src="<?=$img_user?>" width="40" height="40" alt="Пользователь">
                 </div>
                 <div class="user-menu__list"
                 <p> <?php echo ($user_name); ?> </p>

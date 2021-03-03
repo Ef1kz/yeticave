@@ -10,6 +10,7 @@ $layout_content = compile_template('layout.php',
 'is_auth' => $is_auth,
 'user_name' => $user_name,
 'page_content'=>$page_content,
-'categories'=>$categories]);
+'categories'=>$categories,
+    'img_user'=>$img_user]);
 print ($layout_content)
 ?>
