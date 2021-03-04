@@ -75,7 +75,7 @@ function sum_format ($number)
     }
     else
     {
-        $price=$number;
+        return $price;
     }
     if ($withRubleElem==true)
     {
