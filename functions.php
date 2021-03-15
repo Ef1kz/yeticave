@@ -1,5 +1,5 @@
 <?php
-
+require_once('data.php');
 
 function time_page()
 {

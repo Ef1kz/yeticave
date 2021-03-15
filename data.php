@@ -52,12 +52,12 @@ $data_list = [
 ];
 
 $Link = mysqli_connect('127.0.0.1', 'root','','schema');
+mysqli_set_charset($Link, utf8);
 $sql='select * from categories';
 $result=mysqli_query($Link,$sql);
-msqli_set_query($Link,$sql);
 if($result)
 {
     echo mysqli_error($Link);
 }
-$categories_list=msqli_fetch_all($result,MYSQLI_ASSOC);
+$categories_list=mysqli_fetch_all($result,MYSQLI_ASSOC);
 ?>
