@@ -1,4 +1,3 @@
-
 CREATE TABLE categories(
 categ_id int AUTO_INCREMENT,
 categ_name varchar(50),
