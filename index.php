@@ -1,5 +1,6 @@
 <?php
 require_once ('functions.php');
+require_once('data.php');
 
 $page_content = compile_template('index.php',
 ['categories' => $categories,
@@ -12,5 +13,5 @@ $layout_content = compile_template('layout.php',
 'page_content'=>$page_content,
 'categories'=>$categories,
     'img_user'=>$img_user]);
-print ($layout_content)
+print ($layout_content);
 ?>
