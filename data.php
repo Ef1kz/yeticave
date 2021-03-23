@@ -54,13 +54,12 @@ $data_list = [
 $Link = mysqli_connect('127.0.0.1', 'root','','schema2');
 mysqli_set_charset($Link, utf8);
 $sql='select * from categories';
-$categories=mysqli_query($Link,$sql);
-if($categories)
+$categories_list=mysqli_query($Link,$sql);
+if($categories_list)
 {
     echo mysqli_error($Link);
 }
-$categories_list=mysqli_fetch_all($categories,MYSQLI_ASSOC);
-
+$categories_list=mysqli_fetch_all($categories_list,MYSQLI_ASSOC);
 $sql2='select * from lots';
 $data_list=mysqli_query($Link,$sql2);
 if($data_list)

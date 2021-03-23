@@ -3,7 +3,7 @@ require_once ('functions.php');
 require_once('data.php');
 
 $page_content = compile_template('index.php',
-['categories' => $categories,
+['categories_list' => $categories_list,
  'data_list' => $data_list]);
 
 $layout_content = compile_template('layout.php',
