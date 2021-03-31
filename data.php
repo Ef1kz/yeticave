@@ -51,7 +51,7 @@ $data_list = [
     ]
 ];*/
 
-$Link = mysqli_connect('127.0.0.1', 'root','','schema2');
+$Link = mysqli_connect('127.0.0.1', 'root','','schema3');
 mysqli_set_charset($Link, utf8);
 $sql='select * from categories';
 $categories_list=mysqli_query($Link,$sql);

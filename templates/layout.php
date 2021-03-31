@@ -22,41 +22,44 @@
             <a class="main-header__add-lot button" href="add.php">Добавить лот</a>
 
             <nav class="user-menu">
+                <?php if(!empty($_SESSION['is_auth'])): ?>
+                    <div class="user-menu__image">
+                        <img src="<?=$_SESSION['is_auth']['user_image']?>" width="40" height="40" alt="Пользователь">
+                    </div>
+                    <div class="user-menu__logged">
+                        <p> <?=$_SESSION['is_auth']['user_name']?> </p>
+                    </div>
+                    <div class="user-menu__logged">
+                        <a href="logout.php">Выйти</a>
+                    </div>
+                <?php else: ?>
+                    <ul class="user-menu__list">
+                        <li class="user-menu__item">
+                            <a href="SignUp.php">Регистрация</a>
+                        </li>
+                        <li class="user-menu__item">
+                            <a href="login.php">Вход</a>
+                        </li>
 
-                <?php if ($is_auth):?>
-                <div>
-                    <img src="<?=$img_user?>" width="40" height="40" alt="Пользователь">
-                </div>
-                <div class="user-menu__list"
-                <p> <?php echo ($user_name); ?> </p>
+                    </ul>
+                <?php endif; ?>
+            </nav>
         </div>
-        <?php else: ?>
-            <ul class="user-menu__list">
-                <li class="user-menu__item">
-                    <a href="#">Регистрация</a>
-                </li>
-                <li class="user-menu__item">
-                    <a href="#">Вход</a>
-                </li>
-            </ul>
-        <?php endif; ?>
+    </header>
 
-</div>
-</nav>
-</header>
+    <main class="container">
+        <?=$page_content;?>
 
-<main class="container">
-    <?=$page_content;?>
-</main>
+    </main>
 </div>
 
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
-            <?php foreach ($categories_list as $category): ?>
+            <?php foreach($categories_list as $item): ?>
                 <li class="nav__item">
-                    <a href="pages/all-lots.html"><?=$category['categ_name'];?></a>
+                    <a href="pages/all-lots.html"><?= $item['categ_name'];?></a>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -102,8 +105,5 @@
         </div>
     </div>
 </footer>
-
-<script src="flatpickr.js"></script>
-<script src="script.js"></script>
 </body>
 </html>

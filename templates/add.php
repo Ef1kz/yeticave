@@ -37,12 +37,13 @@
     </div>
     <div class="form__item form__item--file">
         <label>Изображение <sup>*</sup></label>
-        <div class="form__input-file">
+        <div class="preview">
+        <button class="preview__remove" type="button">
             <input class="visually-hidden" type="file" id="lot-img" value="">
             <label for="lot-img">
                 Добавить
             </label>
-        </div>
+        </button>
     </div>
     <div class="form__container-three">
         <div class="form__item form__item--small <?= empty($errors['lot-rate'])? "" : "form__item--invalid"  ?>">
